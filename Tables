@@ -1,0 +1,215 @@
+CREATE TABLE InsurancePackages (
+    insp_id serial PRIMARY KEY,
+    insp_title varchar(60),
+    insp_desc varchar(255),
+    insp_status char(2),
+    insp_range_start numeric,
+    insp_range_end numeric,
+    insp_agelimit_start int,
+    insp_agelimit_end int
+);
+-- Sample INSERT statements for the InsurancePackages table
+
+	
+	
+	CREATE TABLE InsuranceDiscounts (
+    insp_id int,
+    disc_id int
+);
+
+
+
+
+-- Sample INSERT statements for the InsuranceDiscounts table
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (1, 101);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (2, 102);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (3, 103);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (4, 104);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (5, 105);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (6, 106);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (7, 107);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (8, 108);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (9, 109);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (10, 110);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (11, 111);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (12, 112);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (13, 113);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (14, 114);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (15, 115);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (16, 116);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (17, 117);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (18, 118);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (19, 119);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (20, 120);
+-- Additional INSERT statements for the InsuranceDiscounts table
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (6, 121);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (9, 122);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (12, 123);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (15, 124);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (18, 125);
+-- More INSERT statements for the InsuranceDiscounts table
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (2, 126);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (4, 127);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (7, 128);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (10, 129);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (13, 130);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (16, 131);
+INSERT INTO InsuranceDiscounts (insp_id, disc_id) VALUES (19, 132);
+
+CREATE TABLE InsurancePackageCoveredDiseases as select * from InsuranceDiscounts
+
+
+-- Insert 32 sample records into the InsuranceDiscounts table
+INSERT INTO DiseaseDetails (disc_id, disc_name, disc_icdcode, disc_desc, disc_status)
+VALUES
+    (101, 'Hypertension', 'I10', 'High blood pressure', 'AC'),
+    (102, 'Diabetes', 'E11', 'Type 2 diabetes mellitus', 'AC'),
+    (103, 'Asthma', 'J45', 'Bronchial asthma', 'AC'),
+    (104, 'Influenza', 'J11', 'Influenza, virus not identified', 'AC'),
+    (105, 'Migraine', 'G43', 'Migraine', 'AC'),
+    (106, 'Arthritis', 'M15', 'Polyosteoarthritis', 'AC'),
+    (107, 'Pneumonia', 'J18', 'Pneumonia, unspecified organism', 'AC'),
+    (108, 'Cancer', 'C80', 'Malignant neoplasm', 'AC'),
+    (109, 'Chronic Kidney Disease', 'N18', 'Chronic kidney disease', 'AC'),
+    (110, 'Epilepsy', 'G40', 'Epileptic seizures', 'AC'),
+    (111, 'Obesity', 'E66', 'Obesity', 'AC'),
+    (112, 'Rheumatoid Arthritis', 'M05', 'Rheumatoid arthritis', 'AC'),
+    (113, 'COPD', 'J44', 'Chronic obstructive pulmonary disease', 'AC'),
+    (114, 'Alzheimer''s Disease', 'G30', 'Alzheimer''s disease', 'AC'),
+    (115, 'Stroke', 'I63', 'Cerebral infarction', 'AC'),
+    (116, 'Hepatitis B', 'B18', 'Chronic viral hepatitis B', 'AC'),
+    (117, 'HIV/AIDS', 'B20', 'HIV disease', 'AC'),
+    (118, 'Osteoporosis', 'M81', 'Postmenopausal osteoporosis', 'AC'),
+    (119, 'Gastroesophageal Reflux Disease', 'K21', 'GERD', 'AC'),
+    (120, 'Hypothyroidism', 'E03', 'Hypothyroidism', 'AC'),
+    (121, 'Anxiety Disorder', 'F41', 'Generalized anxiety disorder', 'AC'),
+    (122, 'Depression', 'F32', 'Major depressive disorder', 'AC'),
+    (123, 'Glaucoma', 'H40', 'Glaucoma', 'AC'),
+    (124, 'Psoriasis', 'L40', 'Psoriasis', 'AC'),
+    (125, 'Hemorrhoids', 'K64', 'Hemorrhoids', 'AC'),
+    (126, 'Acne', 'L70', 'Acne', 'AC'),
+    (127, 'Celiac Disease', 'K90', 'Celiac disease', 'AC'),
+    (128, 'Gout', 'M10', 'Gout', 'AC'),
+    (129, 'Ovarian Cancer', 'C56', 'Malignant neoplasm of ovary', 'AC'),
+    (130, 'Pancreatic Cancer', 'C25', 'Malignant neoplasm of pancreas', 'AC'),
+    (131, 'Leukemia', 'C91', 'Lymphoid leukemia', 'AC'),
+    (132, 'Hypertension', 'I10', 'High blood pressure', 'NA');
+
+
+
+CREATE TABLE DiseaseDetails (
+    disc_id INT,
+    disc_name VARCHAR(100),
+    disc_icdcode VARCHAR(10),
+    disc_desc VARCHAR(255),
+    disc_status CHAR(2)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=============================================================================================
+
+
+
+
+
+
+
+
+
+select  * from insurancepackages
+
+CREATE TABLE InsurancePackages (
+    insp_id serial PRIMARY KEY,
+    insp_title varchar(60),
+    insp_desc varchar(255),
+    insp_status char(2),
+    insp_range_start numeric,
+    insp_range_end numeric,
+    insp_agelimit_start int,
+    insp_agelimit_end int
+);
+-- Sample INSERT statements for the InsurancePackages table
+
+INSERT INTO InsurancePackages (insp_title, insp_desc, insp_status, insp_range_start, insp_range_end, insp_agelimit_start, insp_agelimit_end)
+VALUES
+    ('Basic Health Coverage Plan', ' Essential coverage for common medical needs.', 'AC', 1000000.00, 2000000.00, 18, 65),
+    ('Travel Health Insurance', 'Protection while traveling abroad.', 'NA', 150000.00, 2500000.00, 20, 60),
+    ('Package 3', 'Description for Package 3', 'A', 1000000.00, 1500000.00, 25, 70),
+    ('Package 4', 'Description for Package 4', 'C', 800000.00, 1500000.00, 30, 75),
+    ('Package 5', 'Description for Package 5', 'B', 1000000.00, 1500000.00, 18, 65),
+    ('Package 6', 'Description for Package 6', 'A', 1200000.00, 2000000.00, 22, 68),
+    ('Package 7', 'Description for Package 7', 'A', 1000000.00, 2500000.00, 26, 72),
+    ('Package 8', 'Description for Package 8', 'B', 1500000.00, 2500000.00, 28, 74),
+    ('Package 9', 'Description for Package 9', 'A', 900000.00, 2000000.00, 32, 77),
+    ('Package 10', 'Description for Package 10', 'C', 700000.00, 1500000.00, 23, 66),
+    ('Package 11', 'Description for Package 11', 'A', 1000000.00, 1200000.00, 21, 68),
+    ('Package 12', 'Description for Package 12', 'B', 1000000.00, 1500000.00, 27, 71),
+    ('Package 13', 'Description for Package 13', 'A', 1000000.00, 2000000.00, 29, 73),
+    ('Package 14', 'Description for Package 14', 'A', 1500000.00, 2000000.00, 24, 69),
+    ('Package 15', 'Description for Package 15', 'B', 1000000.00, 2000000.00, 31, 76),
+    ('Package 16', 'Description for Package 16', 'C', 800000.00, 2000000.00, 33, 78),
+    ('Package 17', 'Description for Package 17', 'B', 1000000.00, 2000000.00, 19, 64),
+    ('Package 18', 'Description for Package 18', 'A', 1000000.00, 2000000.00, 25, 70),
+    ('Package 19', 'Description for Package 19', 'C', 1500000.00, 2100000.00, 28, 74),
+    ('Package 20', 'Description for Package 20', 'A', 500000.00, 1200000.00, 30, 75);
+	
+	
+	
+	
+	INSERT INTO InsurancePackages (insp_title, insp_desc, insp_status, insp_range_start, insp_range_end, insp_agelimit_start, insp_agelimit_end)
+VALUES
+    ('Basic Health Coverage Plan', 'Essential coverage for common medical needs.', 'AC', 1000000.00, 2000000.00, 18, 65),
+    ('Travel Health Insurance', 'Protection while traveling abroad.', 'NA', 150000.00, 2500000.00, 20, 60),
+    ('Family Health Assurance', 'Protection for your entire family''s well-being.', 'AC', 1000000.00, 1500000.00, 25, 70),
+    ('Senior Citizen Health Care', 'Specialized care for seniors'' health requirements.', 'NA', 800000.00, 1500000.00, 30, 75),
+    ('Child Health Wellness', 'Coverage tailored for children''s healthcare.', 'AC', 1000000.00, 1500000.00, 18, 65),
+    ('Dental and Vision Health Plan', 'Insurance for dental and vision needs.', 'AC', 1200000.00, 2000000.00, 22, 68),
+    ('Hospitalization and Surgery Coverage', 'Financial support for hospital stays and surgeries.', 'AC', 1000000.00, 2500000.00, 26, 72),
+    ('Mental Health and Well-being Package', 'Support for mental health services.', 'NA', 1500000.00, 2500000.00, 28, 74),
+    ('Maternity and Newborn Care', 'Coverage for pregnancy and newborns.', 'AC', 900000.00, 2000000.00, 32, 77),
+    ('Cancer Care Insurance', 'Financial assistance for cancer treatment.', 'NA', 700000.00, 1500000.00, 23, 66),
+    ('Preventive Health Checkup', 'Regular health checkups to prevent illnesses.', 'AC', 1000000.00, 1200000.00, 21, 68),
+    ('Chronic Illness Management', 'Specialized care for chronic conditions.', 'NA', 1000000.00, 1500000.00, 27, 71),
+    ('Prescription Medication Coverage', 'Assistance for prescription drug costs.', 'AC', 1000000.00, 2000000.00, 29, 73),
+    ('Travel Health Insurance', 'Protection while traveling abroad.', 'AC', 1500000.00, 2000000.00, 24, 69),
+    ('International Health Coverage', 'Global healthcare coverage.', 'NA', 1000000.00, 2000000.00, 31, 76),
+    ('Deductible and Copay Options', 'Flexible cost-sharing choices.', 'NA', 800000.00, 2000000.00, 33, 78),
+    ('Employee Group Health Benefits', 'Health coverage for employees.', 'NA', 1000000.00, 2000000.00, 19, 64),
+    ('Short-term Health Insurance', 'Temporary coverage for specific needs.', 'AC', 1000000.00, 2000000.00, 25, 70),
+    ('High-Deductible Health Plan (HDHP)', 'A plan with a high deductible.', 'NA', 1500000.00, 2100000.00, 28, 74),
+	('Premium Family Health Plan', 'Comprehensive health coverage for your entire family, including medical, dental, and vision care.', 'AC', 1500000.00, 3000000.00, 25, 60);
+
+select * from InsurancePackages where  insp_range_start <28 and insp_range_end>28;
+create table InsurancePackages
+
+SELECT *
+FROM InsurancePackages
+WHERE 28 BETWEEN insp_agelimit_start AND insp_agelimit_end;
+select * FROM InsurancePackages
+select * FROM InsurancePackages where insp_status='ALL' and 28 BETWEEN insp_agelimit_start AND insp_agelimit_end;
